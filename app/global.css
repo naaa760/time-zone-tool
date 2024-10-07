@@ -1,0 +1,57 @@
+/* app/global.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body styles */
+body {
+  @apply bg-gradient-to-r from-purple-400 to-purple-300 text-white;
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Additional sparkle effect */
+.sparkle {
+  position: relative;
+}
+
+.sparkle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  animation: sparkle-animation 3s linear infinite;
+}
+
+@keyframes sparkle-animation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Additional responsive styles can be added here */

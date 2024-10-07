@@ -1,0 +1,21 @@
+/* app/components/Navbar.module.css */
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #0070f3; /* Change text color on hover */
+}
