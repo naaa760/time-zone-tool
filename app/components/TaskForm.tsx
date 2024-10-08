@@ -20,20 +20,20 @@ const TaskForm = ({ onSubmit }) => {
         placeholder="Task Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-300 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
+        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-500 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
       />
       <input
         type="text"
         placeholder="Participants (comma-separated)"
         value={participants}
         onChange={(e) => setParticipants(e.target.value)}
-        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-300 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
+        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-500 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
       />
       <input
         type="date"
         value={dueDate}
         onChange={(e) => setDueDate(e.target.value)}
-        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-300 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
+        className="p-4 rounded-lg bg-white bg-opacity-10 text-white placeholder-gray-500 border border-transparent focus:border-purple-500 focus:bg-opacity-20 transition duration-300"
       />
       <button
         type="submit"
