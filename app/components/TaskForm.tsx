@@ -1,11 +1,19 @@
 import { useState } from "react";
 
-const TaskForm = ({ onSubmit }) => {
+interface TaskFormProps {
+  onSubmit: (task: {
+    title: string;
+    participants: string;
+    dueDate: string;
+  }) => void;
+}
+
+const TaskForm = ({ onSubmit }: TaskFormProps) => {
   const [title, setTitle] = useState("");
   const [participants, setParticipants] = useState("");
   const [dueDate, setDueDate] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit({ title, participants, dueDate });
     setTitle("");

@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
-const MeetingForm = ({ onSubmit }) => {
-  const [title, setTitle] = useState("");
-  const [participants, setParticipants] = useState("");
+// Define the type for the onSubmit prop
+interface MeetingFormProps {
+  onSubmit: (meeting: { title: string; participants: string[] }) => void;
+}
 
-  const handleSubmit = (e) => {
+const MeetingForm: React.FC<MeetingFormProps> = ({ onSubmit }) => {
+  const [title, setTitle] = useState<string>("");
+  const [participants, setParticipants] = useState<string>("");
+
+  // Type the event parameter properly as FormEvent
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    // Ensure onSubmit receives the correct format
     onSubmit({ title, participants: participants.split(",") });
+
+    // Clear the form after submission
     setTitle("");
     setParticipants("");
   };

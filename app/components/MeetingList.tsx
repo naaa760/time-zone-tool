@@ -1,7 +1,18 @@
-// MeetingList.tsx
 import React from "react";
 
-const MeetingList = ({ meetings, onDelete }) => {
+// Define types for the meeting and onDelete props
+interface Meeting {
+  id: string;
+  title: string;
+  participants: string[];
+}
+
+interface MeetingListProps {
+  meetings: Meeting[];
+  onDelete: (id: string) => void;
+}
+
+const MeetingList: React.FC<MeetingListProps> = ({ meetings, onDelete }) => {
   return (
     <ul className="list-disc pl-5">
       {meetings.map((meeting) => (
